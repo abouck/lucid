@@ -22,8 +22,8 @@ class ApplicationController < ActionController::Base
 
   def client
     @client = Twitter::REST::Client.new do |config|
-    config.consumer_key        = "ugOVTI98wHp1g9GiZGSItw"
-    config.consumer_secret     = "O7I1nDpdkVkqKRUm1OBYjKD8u6DFIJRWnPvQqj00E1Q"
+    config.consumer_key        = 
+    config.consumer_secret     = 
     config.access_token        = current_user.auth_token
     config.access_token_secret = current_user.secret_token
     end
