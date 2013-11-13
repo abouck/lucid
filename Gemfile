@@ -1,5 +1,13 @@
 source 'https://rubygems.org'
 
+group :test do
+  gem 'pry'
+end
+
+# Twitter API Gem
+gem 'twitter'
+
+# Twitter OmniAuth
 gem 'omniauth-twitter'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
