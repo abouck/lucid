@@ -1,54 +1,38 @@
 <h1>Your Own Search Page</h1>
 
-	<div class = "container">	
-	<a href="/"><%= image_tag "User_tweet.png", class: "search_img" %></a>
-	<a href="/"><%= image_tag "Home.png", class: "search_img" %></a>
-	<a href="/"><%= image_tag "Chat.png", class: "search_img" %></a>
+	<div class = "icon_container">
+		<div class="icon_div">
+		<%= form_tag ownsearches_owntimeline_path, :method => 'get' do %>	
+		<%= image_submit_tag ("User_tweet.png"), class: "search_img" %>
+		<div><%= link_to "User Tweets", tweets_path %> </div>
+		<% end %>
+		</div>
+
+		<div class="icon_div">
+		<%= form_tag ownsearches_owntimeline_path, :method => 'get' do %>	
+		<%= image_submit_tag ("Home.png"), class: "search_img" %>
+		<div><%= link_to "User Homepage Tweets", tweets_path %> </div>
+		<% end %>
+		</div>
+
+		<div class="icon_div">
+		<%= form_tag ownsearches_owntimeline_path, :method => 'get' do %>	
+		<%= image_submit_tag ("Chat.png"), class: "search_img" %>
+		<div><%= link_to "User Mentions", tweets_path %> </div>
+		<% end %>
+		</div>
 	</div>
 
-<%= render 'owntimeline' %>	
+	<!-- can i write something like the below so when one of the icons are clicked it renders specific partial? -->
+	
+	<%#if @owntimeline %>
+		<%# render 'owntimeline' %>	
+	<%#elsif @ownhometime %>
+		<%# render 'ownhometimeline' %>	
+	<%#elsif @ownmentions %>
+		<%# render 'ownmentions' %>	
+	<%#end %>
+	<%#end %>
+	<%#end %>
+
 			
-<%= link_to 'back', new_tweet_path %>
-
-<table class="table table-hover">
-  	<tr>
-  		<th>Your Tweets</th>
-  	</tr>
-
-	    <% @own_timeline.each do |tweet| %>
-	    <tr>
-	    	<td><%= link_to tweet.text, "https://www.twitter.com/#{tweet.user.screen_name}" %></td>
-	    </tr>
-
-   <% end %>   
-  </table>
-
-
-
-  <table class="table table-hover">
-  	<tr>
-  		<th>Tweets From Your Timeline</th>
-  	</tr>
-
-	    <% @own_home_timeline.each do |tweet| %>
-	    <tr>
-	    	<td><%= link_to tweet.text, "https://www.twitter.com/#{tweet.user.screen_name}" %></td>
-	    </tr>
-
-   <% end %>   
-  </table>
-
-
-
-  <table class="table table-hover">
-  	<tr>
-  		<th>Tweets You Were Mentioned In</th>
-  	</tr>
-
-	    <% @own_mentions.each do |tweet| %>
-	    <tr>
-	    	<td><%= link_to tweet.text, "https://www.twitter.com/#{tweet.user.screen_name}" %></td>
-	    </tr>
-
-   <% end %>   
-  </table>

@@ -1,0 +1,17 @@
+<h1>Profile Tweets</h1>
+
+<%= link_to 'Back', new_search_path %>
+
+ <table class="table table-hover">
+  	<tr>
+  		<th>Your Profile Tweets</th>
+  	</tr>
+
+  	<% if @profiletweets %>
+	    <% @profiletweets.each do |tweet| %>
+	    <tr>
+	    	<td><%= link_to tweet.text, "https://www.twitter.com/#{tweet.user.screen_name}" %></td>
+	    </tr>
+	   <% end %>   
+	<% end %>
+  </table>

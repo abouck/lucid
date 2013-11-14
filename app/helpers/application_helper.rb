@@ -1,6 +1,7 @@
 module ApplicationHelper
 
 	def show_tweet_results
-		"hello!!!!!!!!!!!!!!!!!!"
+		"hello!!!!!!!!!!!!!!!!!!" 
 	end
+
 end

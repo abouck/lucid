@@ -7,6 +7,8 @@ resources :ownsearches
 
   root 'tweets#index'
   match 'auth/:provider/callback', 	to: 'sessions#create', 					via: 'get'
+  match 'ownsearches/owntimeline', 	to: 'ownsearches#show', 				via: 'get'
+  
   match 'auth/failure', 			to: 'tweets#index', 					via: 'get'
   match 'signout', 					to: 'sessions#destroy', as: 'signout', 	via: 'delete'
 end
