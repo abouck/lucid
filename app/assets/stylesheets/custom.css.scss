@@ -1,0 +1,81 @@
+@import "bootstrap";
+
+body { padding-top: 70px; }
+
+ul .nav navbar-nav navbar-right{
+	float: left !important;
+	/*margin-left: 100px;*/
+	padding-left: 200px;
+	padding-right: 10px;
+}
+
+.twitter_img{
+	margin-top: 10px;
+}
+
+.container{
+	width: 900px;
+	margin: 0 auto;
+}
+
+.search_container {
+	width: 500px;
+	height: 200px;
+	margin: 0 auto;
+	text-align: center;
+	border: 1px solid gray;
+}
+
+.icon_container {
+	width: 500px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.search_img{
+	width: 150px;
+	height: 150px;
+	/*margin: 40px 20px 20px 20px;*/
+	/*margin: 0 auto;
+	display: inline block;
+	float: left;*/
+	/*background-color: gray;*/
+	
+}
+
+.icon_div{
+	width: 200px;
+	height: 200px;
+	/*background-color: blue;*/
+	margin: 40px 20px 20px 20px;
+	/*margin: 20px auto;*/
+	padding: 10px;
+	text-align: center;
+	float: left;
+}
+
+
+#user_search {
+	background-image: url(image-path('own.png'));
+	background-repeat: no-repeat;
+}
+
+#influencer_search {
+	background-image: url(image-path('groups.png'));
+	background-repeat: no-repeat;
+}
+
+#tweet_search {
+	background-image: url(image-path('tweets.png'));
+	background-repeat: no-repeat;
+}
+
+#trending_search {
+	background-image: url(image-path('trending.png'));
+	background-repeat: no-repeat;
+}
+
+.row{
+	margin: 20px;
+}
+

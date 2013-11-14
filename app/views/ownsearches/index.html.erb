@@ -1,0 +1,54 @@
+<h1>Your Own Search Page</h1>
+
+	<div class = "container">	
+	<a href="/"><%= image_tag "User_tweet.png", class: "search_img" %></a>
+	<a href="/"><%= image_tag "Home.png", class: "search_img" %></a>
+	<a href="/"><%= image_tag "Chat.png", class: "search_img" %></a>
+	</div>
+
+<%= render 'owntimeline' %>	
+			
+<%= link_to 'back', new_tweet_path %>
+
+<table class="table table-hover">
+  	<tr>
+  		<th>Your Tweets</th>
+  	</tr>
+
+	    <% @own_timeline.each do |tweet| %>
+	    <tr>
+	    	<td><%= link_to tweet.text, "https://www.twitter.com/#{tweet.user.screen_name}" %></td>
+	    </tr>
+
+   <% end %>   
+  </table>
+
+
+
+  <table class="table table-hover">
+  	<tr>
+  		<th>Tweets From Your Timeline</th>
+  	</tr>
+
+	    <% @own_home_timeline.each do |tweet| %>
+	    <tr>
+	    	<td><%= link_to tweet.text, "https://www.twitter.com/#{tweet.user.screen_name}" %></td>
+	    </tr>
+
+   <% end %>   
+  </table>
+
+
+
+  <table class="table table-hover">
+  	<tr>
+  		<th>Tweets You Were Mentioned In</th>
+  	</tr>
+
+	    <% @own_mentions.each do |tweet| %>
+	    <tr>
+	    	<td><%= link_to tweet.text, "https://www.twitter.com/#{tweet.user.screen_name}" %></td>
+	    </tr>
+
+   <% end %>   
+  </table>

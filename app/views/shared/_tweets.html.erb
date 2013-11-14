@@ -1,0 +1,17 @@
+<!-- app/views/shared/_tweets.html.erb -->
+<section id="tweets">
+  <table class="table table-hover">
+  	<tr>
+  		<th>Tweets</th>
+  	</tr>
+
+    <% @tweets.each do |tweet| %>
+    <tr>
+    	<td><li><%= link_to tweet.text, "https://www.twitter.com/#{tweet.user.screen_name}" %></li></td>
+    </tr>
+   <% end %>   
+  </table>
+  
+  
+
+</section>
