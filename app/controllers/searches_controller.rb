@@ -1,6 +1,8 @@
 class SearchesController < ApplicationController
   def index
-    client
+    if current_user
+      client
+    end
     @searches = Search.all
   end
 end

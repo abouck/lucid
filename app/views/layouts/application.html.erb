@@ -18,7 +18,10 @@
         <% end %>
       </div>
     </div>
-<%= render 'shared/tweets' %>
+  <% if current_user %>
+    <%= render 'shared/tweets' %>
+  <% end %>
+
 <%= yield %>
 
 </body>

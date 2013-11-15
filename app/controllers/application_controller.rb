@@ -10,8 +10,10 @@ class ApplicationController < ActionController::Base
 
 
   def load_tweets
-  @tweets = client.user_timeline # For this demonstration lets keep the tweets limited to the first 5 available.
-    print @tweets
+    if current_user
+      @tweets = client.user_timeline # For this demonstration lets keep the tweets limited to the first 5 available.
+      print @tweets
+    end
   end
 
   private
@@ -21,11 +23,13 @@ class ApplicationController < ActionController::Base
   end
 
   def client
-    @client = Twitter::REST::Client.new do |config|
-    config.consumer_key        = 
-    config.consumer_secret     = 
-    config.access_token        = current_user.auth_token
-    config.access_token_secret = current_user.secret_token
+    if current_user
+      @client = Twitter::REST::Client.new do |config|
+      config.consumer_key        = ""
+      config.consumer_secret     = ""
+      config.access_token        = current_user.auth_token
+      config.access_token_secret = current_user.secret_token
+      end
     end
   end
   helper_method :current_user, :client
