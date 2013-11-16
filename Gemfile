@@ -4,6 +4,9 @@ group :test do
   gem 'pry'
 end
 
+# Sentiment Analysis
+gem 'sentimental'
+
 # Twitter API Gem
 gem 'twitter'
 

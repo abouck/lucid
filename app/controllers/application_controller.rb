@@ -11,8 +11,14 @@ class ApplicationController < ActionController::Base
 
   def load_tweets
     if current_user
-      @tweets = client.user_timeline # For this demonstration lets keep the tweets limited to the first 5 available.
-      print @tweets
+      Sentimental.load_defaults
+      @analyzer = Sentimental.new
+      @tweets = client.search("to:healthcaregov", lang: 'en', count: 200) # For this demonstration lets keep the tweets limited to the first 5 available.
+      @scores = []
+      @tweets.each do |tweet|
+        @scores.push(@analyzer.get_score tweet.text)
+      end
+      @average = @scores.inject{ |sum, el| sum + el }.to_f / @scores.size
     end
   end
 

@@ -1,8 +1,9 @@
 <section id="tweets">
+  <%= @average %>
   <ol>
     <% if current_user %>
     <% @tweets.each do |tweet| %>
-      <li><%= link_to tweet.text, "https://www.twitter.com/#{tweet.user.screen_name}" %></li>
+      <li><%= link_to tweet.text, "https://www.twitter.com/#{tweet.user.screen_name}" %><span><%= @analyzer.get_score tweet.text %></span></li>
     <% end %>
     <% end %>
   </ol>
