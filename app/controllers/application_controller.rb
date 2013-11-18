@@ -16,7 +16,8 @@ class ApplicationController < ActionController::Base
       @tweets = client.search("to:healthcaregov", lang: 'en', count: 200) # For this demonstration lets keep the tweets limited to the first 5 available.
       @scores = []
       @tweets.each do |tweet|
-        @scores.push(@analyzer.get_score tweet.text)
+        score = @analyzer.get_score tweet.text
+        @scores.push(score["score"])
       end
       @average = @scores.inject{ |sum, el| sum + el }.to_f / @scores.size
     end
@@ -31,8 +32,8 @@ class ApplicationController < ActionController::Base
   def client
     if current_user
       @client = Twitter::REST::Client.new do |config|
-      config.consumer_key        = ""
-      config.consumer_secret     = ""
+      config.consumer_key        = "ugOVTI98wHp1g9GiZGSItw"
+      config.consumer_secret     = "O7I1nDpdkVkqKRUm1OBYjKD8u6DFIJRWnPvQqj00E1Q"
       config.access_token        = current_user.auth_token
       config.access_token_secret = current_user.secret_token
       end
