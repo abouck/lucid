@@ -1,0 +1,23 @@
+<div class="container" >
+
+<div class="search_container">
+	<h1>New Tweets Search Page</h1>
+	 	<div class="col-sm-12">
+	  
+		  	<%= form_for @search, html: {class: "form-inline", role: "form" } do |f| %>
+
+			<div class="form-group">
+			<%= f.text_field :search_name, placeholder: "Search Name", class: 'form-control' %>
+			</div>
+
+			<%= f.submit "search", type: "submit", class: 'btn btn-default' %>
+		
+		</div>
+</div>
+
+<% end %>
+
+<hr/>
+
+</div>
+

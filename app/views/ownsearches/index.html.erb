@@ -1,0 +1,38 @@
+<h1>Your Own Search Page</h1>
+
+	<div class = "icon_container">
+		<div class="icon_div">
+		<%= form_tag ownsearches_owntimeline_path, :method => 'get' do %>	
+		<%= image_submit_tag ("User_tweet.png"), class: "search_img" %>
+		<div><%= link_to "User Tweets", tweets_path %> </div>
+		<% end %>
+		</div>
+
+		<div class="icon_div">
+		<%= form_tag ownsearches_owntimeline_path, :method => 'get' do %>	
+		<%= image_submit_tag ("Home.png"), class: "search_img" %>
+		<div><%= link_to "User Homepage Tweets", tweets_path %> </div>
+		<% end %>
+		</div>
+
+		<div class="icon_div">
+		<%= form_tag ownsearches_owntimeline_path, :method => 'get' do %>	
+		<%= image_submit_tag ("Chat.png"), class: "search_img" %>
+		<div><%= link_to "User Mentions", tweets_path %> </div>
+		<% end %>
+		</div>
+	</div>
+
+	<!-- can i write something like the below so when one of the icons are clicked it renders specific partial? -->
+	
+	<%#if @owntimeline %>
+		<%# render 'owntimeline' %>	
+	<%#elsif @ownhometime %>
+		<%# render 'ownhometimeline' %>	
+	<%#elsif @ownmentions %>
+		<%# render 'ownmentions' %>	
+	<%#end %>
+	<%#end %>
+	<%#end %>
+
+			

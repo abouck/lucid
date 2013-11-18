@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
 gem 'omniauth-twitter'
+gem 'twitter'
+gem 'pry'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
@@ -10,6 +12,7 @@ gem 'pg'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
+gem 'bootstrap-sass', github: 'thomas-mcdonald/bootstrap-sass'  #the latest bootstrap with SASS gem (via thomas-mcdonald)
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'

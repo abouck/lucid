@@ -7,18 +7,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div id="container">
-      <div id="user_nav">
-        <% if current_user %>
-          Signed in as <%= current_user.name %>!
-          <%= link_to "Sign out", signout_path, method: :delete %>
-        <% else %>
-          <%= link_to "Sign in with Twitter", "/auth/twitter" %>
-          <%# link_to "Sign in with Facebook", "/auth/facebook" %>
-        <% end %>
-      </div>
-    </div>
-<%= yield %>
+	<%= render 'layouts/header' %>
+  
+  <div class = "container" >
+	<%= yield %>
 
+	<!-- app/views/layouts/application.html.erb -->
+	<%# render 'shared/tweets' %>
+
+  </div>
 </body>
 </html>
