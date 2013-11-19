@@ -21,3 +21,6 @@
 /config/initializers/twitter_credentials.rb
 
 
+
+# Ignore application configuration
+/config/application.yml

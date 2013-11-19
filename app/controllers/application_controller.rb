@@ -21,8 +21,8 @@ class ApplicationController < ActionController::Base
   def client
     if current_user
       Twitter.configure do |config|
-      config.consumer_key        = ""
-      config.consumer_secret    = ""
+      config.consumer_key        = ENV["CONSUMER_KEY"]
+      config.consumer_secret    = ENV["CONSUMER_SECRET"]
       config.oauth_token        = current_user.auth_token
       config.oauth_token_secret = current_user.secret_token
       end
