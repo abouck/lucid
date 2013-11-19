@@ -12,10 +12,11 @@ get 'profilesearches/profilehome' => 'profilesearches#profilehome'
 get 'profilesearches/profilementions' => 'profilesearches#profilementions'
 resources :profilesearches
 
-  root 'tweets#index'
+  # root 'tweets#index'
+  root 'staticpages#home'
 
   match 'auth/:provider/callback', 	to: 'sessions#create', 					via: 'get'
-  match 'profilesearches/profiletweets', 	to: 'profilesearches#show', 				via: 'get'
+  # match 'profilesearches/profiletweets', 	to: 'profilesearches#show', 				via: 'get'
   
   match 'auth/failure', 			to: 'tweets#index', 					via: 'get'
   match 'signout', 					to: 'sessions#destroy', as: 'signout', 	via: 'delete'
