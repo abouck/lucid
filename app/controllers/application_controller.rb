@@ -26,7 +26,12 @@ class ApplicationController < ActionController::Base
       config.oauth_token        = current_user.auth_token
       config.oauth_token_secret = current_user.secret_token
       end
-    end
+    else
+       Twitter.configure do |config|
+      config.oauth_token        = ""
+      config.oauth_token_secret = ""
+      end
+    end    
   end
   helper_method :current_user, :client
   

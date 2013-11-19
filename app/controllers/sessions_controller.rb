@@ -6,7 +6,10 @@ class SessionsController < ApplicationController
   end
   
   def destroy
+    user = User.find(session[:user_id])
+    user.destroy
     session[:user_id] = nil
+    client
     redirect_to root_url, notice: "Signed out!"
   end
 end
