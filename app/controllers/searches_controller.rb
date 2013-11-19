@@ -2,22 +2,23 @@ class SearchesController < ApplicationController
 	
 	def index
 		@searches = Search.all
-		
+
+		if params[:usersearch]
+      	@usersearch = Twitter.user_timeline(params[:usersearch])
+  		end	
 	end
 
-	def new
-		@search = Search.new
-	end
+	# def new
+	# 	@search = Search.new
+	# end
 
-	def show
+	# def show
 
-	end
+	# end
 
-	def create
-		@tweetsearch = Twitter.search(params[:search][:search_name], :lang => "en", :count => 200, :result_type => "mixed").results.map
-		# @tweets = Twitter.user_timeline
-	end
-
-	
+	# def create
+	# 	@tweetsearch = Twitter.search(params[:search][:search_name], :lang => "en", :count => 200, :result_type => "mixed").results.map
+	# 	# @tweets = Twitter.user_timeline
+	# end
 
 end

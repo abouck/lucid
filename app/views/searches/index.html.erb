@@ -1,4 +1,72 @@
-<h1>search index page</h1>
+<h1>Search Index Page</h1>
+
+	<div class = "icon_container">
+		<div class="icon_div">
+			<%= form_tag profilesearches_path, :method => 'get' do %>
+			<%= image_submit_tag ("own.png"), class: "search_img" %>
+			<div><%= link_to "Profile Search", profilesearches_path %> </div>
+			<% end %>
+		</div>
+
+		<div class="icon_div">
+			<%= form_tag searches_path, :method => 'get' do %>
+			<%= image_submit_tag ("groups.png"), class: "search_img" %>
+			<div><%= link_to "User Search", searches_path %></div>
+			<% end %>
+		</div>
+
+		<div class="icon_div">
+			<%= form_tag tweets_path, :method => 'get' do %>
+			<%= image_submit_tag ("tweets.png"), class: "search_img" %>
+			<div><%= link_to "Tweet Search", tweets_path %> </div>
+			<% end %>
+		</div>
+			
+		<!-- <div class="icon_div">
+			<%# form_tag root_path, :method => 'get' do %>
+			<%# image_submit_tag ("trending.png"), class: "search_img" %>
+			<div><%# link_to "Trending Search", root_path %></div>
+			<%#end %>
+		</div> -->
+	</div>
+<hr/>
+
+<% if @profilesearch %>
+<%= render '/profilesearch/' %>
+<% end %>
+
+<!-- Need to write if statement or use helper to render partials for all the search queries  -->
+<!-- <div class="search_container"> -->
+	<form class="form-inline" role="form">
+  		<div class="form-group">
+			<%= form_tag tweets_path, :method => 'get' do %>
+			<div class="form-group">
+			    <%= text_field_tag :usersearch, params[:usersearch], placeholder: "@twitter handle", class: 'form-control' %>
+			</div>
+			    <%= submit_tag "Search", :name => nil, type: "submit", class: 'btn btn-default' %>
+			<% end %>
+		</div>
+	</form>
+<!-- </div> -->
+
+<hr/>
+
+<div class="text"><%= link_to 'Back', new_search_path %></div>
+
+ <table class="table table-hover">
+  	<tr>
+  		<th>@User Search Results</th>
+  	</tr>
+
+
+  	<% if @usersearch %>
+	    <% @usersearch.each do |tweet| %>
+	    <tr>
+	    	<td class="text"><%= link_to tweet.text, "https://www.twitter.com/#{tweet.user.screen_name}" %></td>
+	    </tr>
+	   <% end %>   
+	<% end %>
+  </table>
 
 
 
