@@ -2,6 +2,18 @@
 
 body { padding-top: 70px; }
 
+.container{
+	width: 1000px;
+	margin: 0 auto;
+	text-align: center;
+}
+.text {
+	text-align: left;
+}
+
+
+/*nav bar*/
+
 ul .nav navbar-nav navbar-right{
 	float: left !important;
 	/*margin-left: 100px;*/
@@ -13,12 +25,9 @@ ul .nav navbar-nav navbar-right{
 	margin-top: 10px;
 }
 
-.container{
-	width: 1000px;
-	margin: 0 auto;
-	text-align: center;
 
-}
+
+/*search bar*/
 
 .search_container {
 	width: 500px;
@@ -29,6 +38,8 @@ ul .nav navbar-nav navbar-right{
 	/*background-color: green;*/
 }
 
+/*icons*/
+
 .icon_container {
 	width: 900px;
 	height: 250px;
@@ -37,7 +48,7 @@ ul .nav navbar-nav navbar-right{
 	/*background-color: red;*/
 }
 
-.search_img{
+.icon_img{
 	width: 150px;
 	height: 150px;
 	display: relative;
@@ -55,33 +66,10 @@ ul .nav navbar-nav navbar-right{
 	/*background-color: blue;*/
 }
 
-.backbtn{
-	text-align: left;
-}
 
 
-#user_search {
-	background-image: url(image-path('own.png'));
-	background-repeat: no-repeat;
-}
 
-#influencer_search {
-	background-image: url(image-path('groups.png'));
-	background-repeat: no-repeat;
-}
-
-#tweet_search {
-	background-image: url(image-path('tweets.png'));
-	background-repeat: no-repeat;
-}
-
-#trending_search {
-	background-image: url(image-path('trending.png'));
-	background-repeat: no-repeat;
-}
-
-.row{
+/*.row{
 	margin: 20px;
-}
-
+}*/
 

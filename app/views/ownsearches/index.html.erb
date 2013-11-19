@@ -1,38 +1,61 @@
 <h1>Your Own Search Page</h1>
 
 	<div class = "icon_container">
-		<div class="icon_div">
-		<%= form_tag ownsearches_owntimeline_path, :method => 'get' do %>	
-		<%= image_submit_tag ("User_tweet.png"), class: "search_img" %>
-		<div><%= link_to "User Tweets", tweets_path %> </div>
-		<% end %>
+		<div id="usertweets" class="icon_div">
+		<%= image_tag ("User_tweet.png"), class: "icon_img" %>
+		User Tweets
 		</div>
 
-		<div class="icon_div">
-		<%= form_tag ownsearches_owntimeline_path, :method => 'get' do %>	
-		<%= image_submit_tag ("Home.png"), class: "search_img" %>
-		<div><%= link_to "User Homepage Tweets", tweets_path %> </div>
-		<% end %>
+		<div id="hometweets" class="icon_div">
+		<%= image_tag ("Home.png"), class: "icon_img" %>
+		User Homepage Tweets
 		</div>
 
-		<div class="icon_div">
-		<%= form_tag ownsearches_owntimeline_path, :method => 'get' do %>	
-		<%= image_submit_tag ("Chat.png"), class: "search_img" %>
-		<div><%= link_to "User Mentions", tweets_path %> </div>
-		<% end %>
+		<div id="usermentions" class="icon_div">
+		<%= image_tag ("Chat.png"), class: "icon_img" %>
+		User Mentions
 		</div>
 	</div>
 
-	<!-- can i write something like the below so when one of the icons are clicked it renders specific partial? -->
-	
-	<%#if @owntimeline %>
-		<%# render 'owntimeline' %>	
-	<%#elsif @ownhometime %>
-		<%# render 'ownhometimeline' %>	
-	<%#elsif @ownmentions %>
-		<%# render 'ownmentions' %>	
-	<%#end %>
-	<%#end %>
-	<%#end %>
+	<table id="tweet_table" class="text table table-hover">
+		<tr><th>Tweets</th></tr>
+		 
+	</table>
 
-			
+	<script type="text/javascript">
+	$( "#usertweets" ).click(function() {
+		$.get('ownsearches/user_tweets.json', function(usertweets){
+			$('#tweet_table').empty();
+			console.log(usertweets);
+			usertweets.forEach(function(tweet){
+				// console.log(tweet.text);
+				$('#tweet_table').append("<tr><td><a href='http://www.twitter.com/" + tweet.user.screen_name + "'>" + tweet.text + "</a></td></tr>")
+			});
+		});
+	});
+
+
+	$( "#hometweets" ).click(function() {
+		console.log('click');
+		$.get('ownsearches/home_tweets.json', function(hometweets){
+			$('#tweet_table').empty();
+			hometweets.forEach(function(tweet){
+				// console.log(tweet.text);
+				$('#tweet_table').append("<tr><td><a href='http://www.twitter.com/" + tweet.user.screen_name + "'>" + tweet.text + "</a></td></tr>")
+			});
+		});
+	});
+
+
+	$( "#usermentions" ).click(function() {
+
+		$.get('ownsearches/user_mentions.json', function(usermentions){
+			$('#tweet_table').empty();
+			console.log(usermentions);
+			usermentions.forEach(function(tweet){
+				// console.log(tweet.text);
+				$('#tweet_table').append("<tr><td><a href='http://www.twitter.com/" + tweet.user.screen_name + "'>" + tweet.text + "</a></td></tr>")
+			});
+		});
+	});
+	</script>
