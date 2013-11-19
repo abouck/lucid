@@ -36,7 +36,7 @@
   		<div class="form-group">
 			<%= form_tag tweets_path, :method => 'get' do %>
 			<div class="form-group">
-			    <%= text_field_tag :usersearch, params[:usersearch], placeholder: "Search Name", class: 'form-control' %>
+			    <%= text_field_tag :tweetsearch, params[:tweetsearch], placeholder: "Search Name", class: 'form-control' %>
 			</div>
 			    <%= submit_tag "Search", :name => nil, type: "submit", class: 'btn btn-default' %>
 			<% end %>
@@ -46,19 +46,19 @@
 
 <hr/>
 
-<div class="backbtn"><%= link_to 'Back', new_search_path %></div>
+<div class="text"><%= link_to 'Back', new_search_path %></div>
 
  <table class="table table-hover">
   	<tr>
   		<th>User Tweets</th>
   	</tr>
-<%#= show_tweet_results %>
 
-  	<%#if @profilementions %>
-	    <%#@profilementions.each do |tweet| %>
+
+  	<% if @tweetsearch %>
+	    <% @tweetsearch.each do |tweet| %>
 	    <tr>
-	    	<td><%# link_to tweet.text, "https://www.twitter.com/#{tweet.user.screen_name}" %></td>
+	    	<td class="text"><%= link_to tweet.text, "https://www.twitter.com/#{tweet.user.screen_name}" %></td>
 	    </tr>
-	   <%#end %>   
-	<%#end %>
+	   <% end %>   
+	<% end %>
   </table>

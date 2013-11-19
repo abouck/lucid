@@ -1,6 +1,7 @@
 class TweetsController < ApplicationController
   
   def index
+    client
     @tweets = Tweet.all
     # @profiletweets = Twitter.user_timeline
     # @profilehome = Twitter.home_timeline
