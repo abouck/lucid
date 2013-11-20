@@ -6,17 +6,20 @@ class ProfilesearchesController < ApplicationController
 	end
 
 	def profiletweets
-		@profiletweets = Twitter.user_timeline
+		search = Twitter.user_timeline
+		@profiletweets = Search.analyze(search)
 		respond_with(@profiletweets)
 	end
 
 	def profilehome
-		@profilehome = Twitter.home_timeline
+		search = Twitter.home_timeline
+		@profilehome = Search.analyze(search)
 		respond_with(@profilehome)
 	end
 
 	def profilementions
-		@profilementions = Twitter.mentions_timeline
+		search = Twitter.mentions_timeline
+		@profilementions = Search.analyze(search) 
 		respond_with(@profilementions)
 	end
 
