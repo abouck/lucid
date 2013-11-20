@@ -1,11 +1,11 @@
 class SearchesController < ApplicationController
 	
 	def index
-		@searches = Search.all
 
 		if params[:usersearch]
-      	@usersearch = Twitter.user_timeline(params[:usersearch])
-  		end	
+      	search = Twitter.user_timeline(params[:usersearch])
+      	@usersearch = Search.analyze(search)
+  	end
 	end
 
 	# def new

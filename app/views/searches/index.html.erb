@@ -30,7 +30,7 @@
   	<% if @usersearch %>
 	    <% @usersearch.each do |tweet| %>
 	    <tr>
-	    	<td class="text"><%= link_to tweet.text, "https://www.twitter.com/#{tweet.user.screen_name}" %></td>
+	    	<td class="text"><%= link_to tweet.attrs[:sentimental], "https://www.twitter.com/#{tweet.user.screen_name}" %></td>
 	    </tr>
 	   <% end %>   
 	<% end %>
