@@ -2,7 +2,7 @@ class ProfilesearchesController < ApplicationController
 	respond_to :html, :json
 
 	def index
-		# @ownsearches = Ownsearch.all
+		
 	end
 
 	def profiletweets
