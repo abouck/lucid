@@ -13,7 +13,6 @@
   <!-- Collect the nav links, forms, and other content for toggling -->
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav">
-      <li><%= link_to "Home", root_path %></li>
       <li><%= link_to "Profile Search", profilesearches_path %></li>
       <li><%= link_to "User Search", searches_path %></li>
       <li><%= link_to "Tweet search", tweets_path %></li>
@@ -32,7 +31,6 @@
         <% else %>
           <li class="twitter_img"><%= image_tag "social_twitter.png", size: "25", id: "twitter-img" %></li>
           <li><%= link_to "Sign in with Twitter", "/auth/twitter" %></li>
-          <Li><%# link_to "Sign in with Facebook", "/auth/facebook" %></Li>
         <% end %>
     </ul>
   </div><!-- /.navbar-collapse -->

@@ -1,10 +1,6 @@
-
-<% if @profilesearch %>
-<%= render '/profilesearch/' %>
-<% end %>
-
+<div class="container">
 <!-- Need to write if statement or use helper to render partials for all the search queries  -->
-<!-- <div class="search_container"> -->
+<div class="search_container">
 	<form class="form-inline" role="form">
   		<div class="form-group">
 			<%= form_tag tweets_path, :method => 'get' do %>
@@ -15,7 +11,7 @@
 			<% end %>
 		</div>
 	</form>
-<!-- </div> -->
+</div>
 
 <hr/>
 
@@ -35,6 +31,6 @@
 	   <% end %>   
 	<% end %>
   </table>
-
+</div>
 
 
