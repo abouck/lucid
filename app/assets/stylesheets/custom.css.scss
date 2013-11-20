@@ -5,8 +5,9 @@ body {
 	font-family: proxima-nova,"Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-weight: 500;
 	line-height: 1.1;
+	background: url(image-path('wallpaper.jpg')); 
 	/*background-color: #434B4E;*/
-	background-color: #e7e7e7;
+	/*background-color: #e7e7e7;*/
 }
 	
 
@@ -42,14 +43,18 @@ a{
   		margin-top: 0;
   		text-align: center;
   		color: #D5D2CB;
+  		text-shadow: 2px 2px 5px #635763;
+        filter: dropshadow(color=#635763, offx=2, offy=2);
   	}
   	h3{
   		font-size: 24px;
   		color: #D5D2CB;
+  		text-shadow: 2px 2px 5px #635763;
+        filter: dropshadow(color=#635763, offx=2, offy=2);
   	}
   	p{
   		font-size: 14px;
-  		color: #C0B3BC;
+  		color: #7BA29E;
   	}
 }
 
@@ -66,6 +71,7 @@ a{
 	margin: 0 auto;
 	padding: 10px;
 	text-align: center;
+	background-color: #e7e7e7;
 }
 .text {
 	text-align: left;
@@ -179,11 +185,12 @@ ul .nav navbar-nav navbar-right{
 	cursor: pointer;
 	/*background-color: red;*/
 	h4{
-		color: #428bca;
+		color: #434B4E;
+		
 	}
 	p{
 		font-size: 14px;
-		color: gray;
+		color: #7BA29E;
 	}
 }
 
