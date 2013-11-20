@@ -1,27 +1,37 @@
-<h1>Search Partial</h1>
+<!-- <h1>Search Partial</h1> -->
+<div class="jumbotron">
 
-<div class = "icon_container">
+	<h1>Tweet Search</h1>
+	<div class = "icon_container">
 		<div class="icon_div">
+		<div class ="circle">
 			<%= form_tag profilesearches_path, :method => 'get' do %>
-			<%= image_submit_tag ("profile_search.png"), class: "search_img" %>
+			<%= image_submit_tag ("profile_search1.svg"), class: "search_img" %>
+		</div>
 			<h3><%= link_to "Profile Search", profilesearches_path %> </h3>
 			<p>Look at tweets in your profile</p>
 			<% end %>
 		</div>
 
 		<div class="icon_div">
+		<div class ="circle">
 			<%= form_tag searches_path, :method => 'get' do %>
-			<%= image_submit_tag ("user_search.png"), class: "search_img" %>
+			<%= image_submit_tag ("user_search1.svg"), class: "search_img" %>
+			</div>
 			<h3><%= link_to "User Search", searches_path %></h3>
 			<p>Look at tweets from another twitter user</p>
 			<% end %>
 		</div>
 
 		<div class="icon_div">
+		<div class ="circle">
 			<%= form_tag tweets_path, :method => 'get' do %>
-			<%= image_submit_tag ("tweet_search.png"), class: "search_img" %>
+			<%= image_submit_tag ("tweet_search1.svg"), class: "search_img" %>
+			</div>
 			<h3><%= link_to "Tweet Search", tweets_path %> </h3>
 			<p>Search for any tweets</p>
 			<% end %>
 		</div>
+	</div>
 </div>
+<div class="break"></div>

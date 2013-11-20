@@ -1,26 +1,28 @@
 <!-- <h1>Profile Search Page</h1> -->
+
 <div class= "profile_container">
 	<div class = "profile_icon_container">
 		<div id="profiletweets" class="profile_icon_div">
-		<%= image_tag ("profile_tweets.png"), class: "profile_icon_img" %>
+		<%= image_tag ("user_tweets.svg"), class: "profile_icon_img" %>
 		<h4>User Tweets</h4>
 		<p>See your tweets!</p>
 		</div>
 
 		<div id="profilehome" class="profile_icon_div">
-		<%= image_tag ("profile_home2.png"), class: "profile_icon_img" %>
+		<%= image_tag ("homepage_tweets.svg"), class: "profile_icon_img" %>
 		<h4>Homepage Tweets</h4>
 		<p>See tweets on your homepage</p>
 		</div>
 
 		<div id="profilementions" class="profile_icon_div">
-		<%= image_tag ("profile_mentions.png"), class: "profile_icon_img" %>
+		<%= image_tag ("mentions.svg"), class: "profile_icon_img" %>
 		<h4>Mentions</h4>
 		<p>See tweets you've been mentioned in</p>
 		</div>
 	</div>
 </div>
 
+<div class="container">
 	<table id="tweet_table" class="text table table-hover">
 		<tr>
 			<th>Tweets</th>
@@ -67,3 +69,4 @@
 		});
 	});
 	</script>
+</div>

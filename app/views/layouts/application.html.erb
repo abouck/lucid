@@ -8,15 +8,18 @@
 </head>
 <body>
 	<%= render 'layouts/header' %>
-  
-  <div class = "container" >
 
+  <!-- <div class = "container" > -->
+
+  <% if current_user %>
   <%= render 'layouts/newsearches' %>
+  <% else %>
+  <%= render 'staticpages/home' %>
+  <% end %>
+  
 	<%= yield %>
 
-	<!-- app/views/layouts/application.html.erb -->
-	<%# render 'shared/tweets' %>
-
-  </div>
+  <!-- </div> -->
+  <%# render 'layouts/footer' %>
 </body>
 </html>

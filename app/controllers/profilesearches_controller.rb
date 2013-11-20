@@ -2,7 +2,7 @@ class ProfilesearchesController < ApplicationController
 	respond_to :html, :json
 
 	def index
-		# @ownsearches = Ownsearch.all
+		
 	end
 
 	def profiletweets
@@ -11,12 +11,13 @@ class ProfilesearchesController < ApplicationController
 	end
 
 	def profilehome
-		# @own_home_timeline = Twitter.home_timeline
-		respond_with(Twitter.home_timeline)
+		@profilehome = Twitter.home_timeline
+		respond_with(@profilehome)
 	end
 
 	def profilementions
-		respond_with(Twitter.mentions_timeline)
+		@profilementions = Twitter.mentions_timeline
+		respond_with(@profilementions)
 	end
 
 end
