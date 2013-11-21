@@ -1,11 +1,11 @@
 class SearchesController < ApplicationController
-	
+	respond_to :html, :json
+
 	def index
-		@searches = Search.all
-
 		if params[:usersearch]
-      	@usersearch = Twitter.user_timeline(params[:usersearch])
-  		end	
+    	search = Twitter.user_timeline(params[:usersearch])
+      @usersearch = Search.analyze(search)
+      respond_with(@usersearch)
+  	end	
 	end
-
 end
