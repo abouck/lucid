@@ -1,11 +1,11 @@
 <div class="search_container">
-      <div class="form-inline">
+      <form class="form-inline" id="t_search">
       
       <div class="form-group">
           <input type="text_field", placeholder="Search Query or #hashtag", class="form-control", id="tweetsearch">
       </div>
-          <button class="btn btn-default", id="search">Search</button>
-    </div>
+          <button type="submit", class="btn btn-default">Search</button>
+    </form>
 </div>
 
 <hr/>
@@ -18,17 +18,3 @@
     </tr>
   </table>
 </div>
-
-<script type="text/javascript">
-  $( document ).ready(function() {
-    $( "#search" ).click(function() {
-      $.get('tweets/search.json?tweetsearch=' + tweetsearch.value, function(profiletweets){
-        $('.tweet_table').empty();
-        console.log(profiletweets);
-        profiletweets.forEach(function(tweet){
-          $('.tweet_table').append("<tr class='"+ tweet.sentimental.class + "'><td><a href='http://www.twitter.com/" + tweet.user.screen_name + "'>" + tweet.text + "</a></td></tr>")
-        });
-      });
-    });
-  });
-</script>
