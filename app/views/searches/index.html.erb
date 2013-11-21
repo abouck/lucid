@@ -12,7 +12,7 @@
 <div class="container">
 <div class="text"><%= link_to 'Back', root_path %></div>
 
- <table class="table table-hover" id="tweet_table">
+ <table class="text table table-hover tweet_table">
   	<tr>
   		<th>@User Search Results</th>
   	</tr>
@@ -23,11 +23,11 @@
   $( document ).ready(function() {
     $( "#search" ).click(function() {
       $.get('searches/search.json?usersearch=' + usersearch.value, function(profiletweets){
-        $('#tweet_table').empty();
+        $('.tweet_table').empty();
         console.log(profiletweets);
         profiletweets.forEach(function(tweet){
           console.log(tweet.text);
-          $('#tweet_table').append("<tr><td><a href='http://www.twitter.com/" + tweet.user.screen_name + "'>" + tweet.text + "</a></td></tr>")
+          $('.tweet_table').append("<tr><td><a href='http://www.twitter.com/" + tweet.user.screen_name + "'>" + tweet.text + "</a></td></tr>")
         });
       });
     });
