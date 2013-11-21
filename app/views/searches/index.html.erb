@@ -1,34 +1,36 @@
 <div class="search_container">
-	<form class="form-inline" role="form">
-  		<div class="form-group">
-			<%= form_tag tweets_path, :method => 'get' do %>
+  		<div class="form-inline">
+      
 			<div class="form-group">
-			    <%= text_field_tag :usersearch, params[:usersearch], placeholder: "@twitter handle", class: 'form-control' %>
+			    <input type="text_field", placeholder="@twitter handle", class="form-control", id="usersearch">
 			</div>
-			    <%= submit_tag "Search", :name => nil, type: "submit", class: 'btn btn-default' %>
-			<% end %>
+			    <button class="btn btn-default", id="search">Search</button>
 		</div>
-	</form>
 </div>
 
 <hr/>
 <div class="container">
 <div class="text"><%= link_to 'Back', root_path %></div>
 
- <table class="table table-hover">
+ <table class="text table table-hover tweet_table">
   	<tr>
   		<th>@User Search Results</th>
   	</tr>
-
-
-  	<% if @usersearch %>
-	    <% @usersearch.each do |tweet| %>
-	    <tr>
-	    	<td class="text"><%= link_to tweet.text, "https://www.twitter.com/#{tweet.user.screen_name}" %></td>
-	    </tr>
-	   <% end %>   
-	<% end %>
   </table>
 </div>
 
+<script type="text/javascript">
+  $( document ).ready(function() {
+    $( "#search" ).click(function() {
+      $.get('searches/search.json?usersearch=' + usersearch.value, function(profiletweets){
+        $('.tweet_table').empty();
+        console.log(profiletweets);
+        profiletweets.forEach(function(tweet){
+          console.log(tweet.text);
+          $('.tweet_table').append("<tr class='"+ tweet.sentimental.class + "'><td><a href='http://www.twitter.com/" + tweet.user.screen_name + "'>" + tweet.text + "</a></td></tr>")
+        });
+      });
+    });
+  });
+</script>
 
