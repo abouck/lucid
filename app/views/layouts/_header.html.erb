@@ -12,18 +12,19 @@
 
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav">
+      <% if current_user %>
       <li><%= link_to "Profile Search", profilesearches_path %></li>
       <li><%= link_to "User Search", searches_path %></li>
       <li><%= link_to "Tweet Search", tweets_path %></li>
     </ul>
     
     <ul class="nav navbar-nav navbar-right">
-        <% if current_user %>
+        <%#if current_user %>
           <li class="navbar-text navbar-right">Signed in as <%= current_user.name %></li>
           <li><button type = "button" class="btn btn-default navbar-btn"><%= link_to "Sign out", signout_path, method: :delete %></button></li>
-        <% else %>
-          <li class="twitter_img"><%= image_tag "social_twitter.png", size: "25", id: "twitter-img" %></li>
-          <li><%= link_to "Sign in with Twitter", "/auth/twitter" %></li>
+        <%#else %>
+          <!-- <li class="twitter_img"><%# image_tag "social_twitter.png", size: "25", id: "twitter-img" %></li> -->
+          <!-- <li><%# link_to "Sign in with Twitter", "/auth/twitter" %></li> -->
         <% end %>
     </ul>
   </div>

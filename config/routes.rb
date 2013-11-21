@@ -1,9 +1,9 @@
 Lucid::Application.routes.draw do
 resources :articles
-get 'tweets/search' => 'tweets#search'
+  get 'tweets/search' => 'tweets#search'
 resources :tweets
 resources :sessions, only: [:new, :create, :destroy]
-get 'searches/search' => 'searches#search'
+  get 'searches/search' => 'searches#search'
 resources :searches
   get 'profilesearches/profiletweets' => 'profilesearches#profiletweets'
   get 'profilesearches/profilehome' => 'profilesearches#profilehome'

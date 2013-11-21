@@ -25,16 +25,11 @@ a {
   		margin-top: -5px;
   		text-align: center;
   		color: #D5D2CB;
-  		/*text-shadow: 2px 2px 5px #635763;
-        filter: dropshadow(color=#635763, offx=2, offy=2);*/
         text-shadow: 4px 4px 2px #383038;
-        /*4px 4px 2px #383038*/
   	}
   	h3{
   		font-size: 24px;
   		color: #D5D2CB;
-  		/*text-shadow: 2px 2px 5px #635763;
-        filter: dropshadow(color=#635763, offx=2, offy=2);*/
         text-shadow: 4px 2px 2px #383038;
   	}
   	p{
@@ -43,13 +38,42 @@ a {
   	}
 }
 
+.homepage_container{
+	height: 300px;
+	width: 280px;
+	/*background-color: #e7e7e7;*/
+	background: url(image-path('wallpaper.jpg')); 
+	border-radius: 10px;
+	margin: 0 auto;
+	/*padding-top: -10px;*/
+	border: 2px solid #7BA29E;
+
+}
+
+.hp_img_div{
+	height: 270px;
+	width: 260px;
+	margin: 0 auto;
+	padding: 10px;
+	text-align: center;
+	/*background-color: white;*/
+
+}
+
 .homepage_img{
-	margin: -5px auto 10px;
-	border: 7px solid #7BA29E;
+	margin: 0px auto 20px;
+	padding: 0 auto;
+	border: 5px solid #7BA29E;
+}
+
+.hp_sign_in{
+	border: 2px solid #7BA29E;
+	border-radius: 10px;
+	/*width: 180px;*/
 }
 
 .container{
-	width: 1000px;
+	width: 900px;
 	margin: 0 auto;
 	padding: 10px;
 	text-align: center;
@@ -66,6 +90,7 @@ a {
 .navbar{
 	height: 60px;
 	border-bottom: 10px solid #7BA29E;
+	text-shadow: 1px 2px 2px #d2dbd7;
 }
 
 ul .nav navbar-nav navbar-right{
@@ -166,13 +191,13 @@ ul .nav navbar-nav navbar-right{
 	/*background-color: red;*/
 	h4{
 		color: #434B4E;	
-		text-shadow: 1px 0px 0px #383038;
+		text-shadow: 1px 2px 2px #ECF5F1;
 	}
 	p{
 		font-size: 14px;
 		/*color: #7BA29E;*/
 		color: #648781;
-
+		text-shadow: 1px 2px 2px #ECF5F1;
 	}
 }
 

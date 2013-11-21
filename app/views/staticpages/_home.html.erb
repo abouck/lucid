@@ -1,8 +1,13 @@
 <div class="jumbotron">
 <h1>VizaTweet</h1>
-<div class = "icon_container">
 
-<%= image_tag "twitterbird.jpg", size: "300", class: "homepage_img img-circle" %></br>
+	<div class = "homepage_container">
+		<div class = "hp_img_div">
+			<%= image_tag "twitterbird.jpg", size: "200", class: "homepage_img img-circle" %></br>
 
-</div>
+			<%= form_tag "/auth/twitter", :method => 'get' do %>
+			<%= image_submit_tag "sign-in-with-twitter-gray.png", class: "hp_sign_in" %>
+			<% end %>
+		</div>
+	</div>
 </div>
