@@ -2,55 +2,40 @@
 
 body { 
 	padding-top: 70px; 
-	font-family: proxima-nova,"Helvetica Neue", Helvetica, Arial, sans-serif;
+	background: url(image-path('wallpaper.jpg')); 
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-weight: 500;
 	line-height: 1.1;
-	background: url(image-path('wallpaper.jpg')); 
-	/*background-color: #434B4E;*/
-	/*background-color: #e7e7e7;*/
 }
-	
 
-a{
+
+a {
 	color: inherit;
 	text-decoration: none;
-}
-
-#homepage{
-	height: 400px;
-	margin: 10px auto;
-	/*#signin{
-	width: 450px;
-	height: 60px;
-	background: url(image-path('sign-in-with-twitter_0.png')) 
-}*/
-
-}
-
-.homepage_img{
-	margin: 10px auto;
 }
 
 .jumbotron{
 	background-color: #434B4E;
 	border-bottom: 10px solid #7BA29E;
-	/*border-bottom-color: #7BA29E;*/
 	height: 450px;
   	margin: -20px 0 0;
-  	padding: 10px auto;
+  	padding: 0 auto;
   	
   	h1{
-  		margin-top: 0;
+  		margin-top: -5px;
   		text-align: center;
   		color: #D5D2CB;
-  		text-shadow: 2px 2px 5px #635763;
-        filter: dropshadow(color=#635763, offx=2, offy=2);
+  		/*text-shadow: 2px 2px 5px #635763;
+        filter: dropshadow(color=#635763, offx=2, offy=2);*/
+        text-shadow: 4px 4px 2px #383038;
+        /*4px 4px 2px #383038*/
   	}
   	h3{
   		font-size: 24px;
   		color: #D5D2CB;
-  		text-shadow: 2px 2px 5px #635763;
-        filter: dropshadow(color=#635763, offx=2, offy=2);
+  		/*text-shadow: 2px 2px 5px #635763;
+        filter: dropshadow(color=#635763, offx=2, offy=2);*/
+        text-shadow: 4px 2px 2px #383038;
   	}
   	p{
   		font-size: 14px;
@@ -58,13 +43,10 @@ a{
   	}
 }
 
-/*.break{
-  border-top: 1px solid #7BA29E;
-  border-bottom: 1px solid #7BA29E;
-  background-color: #7BA29E;
-  height: 5px;
-
-}*/
+.homepage_img{
+	margin: -5px auto 10px;
+	border: 7px solid #7BA29E;
+}
 
 .container{
 	width: 1000px;
@@ -73,6 +55,7 @@ a{
 	text-align: center;
 	background-color: #e7e7e7;
 }
+
 .text {
 	text-align: left;
 }
@@ -96,10 +79,6 @@ ul .nav navbar-nav navbar-right{
 	margin-top: 10px;
 }
 
-/*.form_container{
-	width: 1000px;
-	background-color: white;
-}*/
 
 /*search bar*/
 
@@ -111,6 +90,7 @@ ul .nav navbar-nav navbar-right{
 	text-align: center;
 	/*background-color: green;*/
 }
+
 
 /*icons*/
 
@@ -125,9 +105,6 @@ ul .nav navbar-nav navbar-right{
 .icon_img{
 	width: 150px;
 	height: 150px;
-	display: relative;
-	/*background-color: gray;*/
-	
 }
 
 .icon_div{
@@ -138,8 +115,9 @@ ul .nav navbar-nav navbar-right{
 	text-align: center;
 	float: left;
 	/*background-color: red;*/
-	p{
+	p {
 		color: gray;
+		text-shadow: 4px 2px 2px #383038;
 	}
 }
 
@@ -147,14 +125,17 @@ ul .nav navbar-nav navbar-right{
 	height: 150px;
 	width: 150px;
 	border-radius: 50%;
-	border: 2px solid #7BA29E;
+	border: 3px solid #7BA29E;
 	margin: 10px auto;
 	padding: 20px;
 	background-color: #ECF5F1;
-	-moz-box-shadow: inset 0 0 5px 5px #888;
-	-webkit-box-shadow: inset 0 0 5px 5px#888;
-	box-shadow: inset 0 0 5px 5px #888;
+	-webkit-box-shadow: inset 1px -3px 40px 8px rgba(115,108,115,1);
+	-moz-box-shadow: inset 1px -3px 40px 8px rgba(115,108,115,1);
+	box-shadow: inset 1px -3px 40px 8px rgba(115,108,115,1);
+
+
 }
+
 
 /*profile icons*/
 
@@ -172,7 +153,6 @@ ul .nav navbar-nav navbar-right{
 	height: 50px;
 	margin: 0 20px;
 	/*background-color: gray;*/
-	
 }
 
 .profile_icon_div{
@@ -185,12 +165,14 @@ ul .nav navbar-nav navbar-right{
 	cursor: pointer;
 	/*background-color: red;*/
 	h4{
-		color: #434B4E;
-		
+		color: #434B4E;	
+		text-shadow: 1px 0px 0px #383038;
 	}
 	p{
 		font-size: 14px;
-		color: #7BA29E;
+		/*color: #7BA29E;*/
+		color: #648781;
+
 	}
 }
 
