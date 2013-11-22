@@ -1,5 +1,9 @@
 class Search < ActiveRecord::Base
   def self.analyze(tweets)
+    wordArr = []
+    tempHash = Hash.new(0)
+    tweetHash = {}
+    freqArr = []
     analyzer = Sentimental.new
     tweets.each do |tweet|
       thash = analyzer.get_score tweet.text
@@ -20,7 +24,15 @@ class Search < ActiveRecord::Base
           thash["class"] = "sent-terrible"
         else
       end
+      thash["keywords"].each do |key,value|
+        wordArr.push(key)
+      end
       tweet.attrs[:sentimental] = thash
     end
+    wordArr.each { |word| tempHash[word] += 1 }
+    tempHash.each do |key,value|
+      freqArr << {"label" => key, "value" => value}
+    end
+    tweetHash = {"freqArr" => freqArr, "tweets" => tweets}
   end
 end
