@@ -4,7 +4,7 @@ gem 'omniauth-twitter'
 gem 'twitter'
 gem 'pry'
 gem 'figaro'
-gem 'sentimental'
+gem 'sentimental', github: 'abouck/sentimental'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
