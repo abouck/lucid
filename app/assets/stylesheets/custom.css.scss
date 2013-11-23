@@ -78,6 +78,7 @@ a {
 	padding: 10px;
 	text-align: center;
 	background-color: #e7e7e7;
+  border-radius: 3px;
 }
 
 .text {
@@ -263,15 +264,9 @@ ul .nav navbar-nav navbar-right{
 
 
 // Bubbles
-a, a:visited {
-  color:#333;
-}
 
 #container {
   padding-top:20px;
-  width: 980px;
-  border-left: 2px #ddd solid;
-  border-right: 2px #ddd solid;
 }
 
 header {
