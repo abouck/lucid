@@ -31,10 +31,10 @@ class Tweet < ActiveRecord::Base
     end
     wordArr.each { |word| tempHash[word] += 1 }
     tempHash.each do |key,value|
-      freqArr << {"label" => key, "value" => value}
+      freqArr << {"name" => key, "count" => value}
     end
     freqArr.sort_by! { |k| k["value"]}.reverse!
-    freqArr.slice!(10..freqArr.length)
+    # freqArr.slice!(10..freqArr.length)
     tweetHash = {"freqArr" => freqArr, "tweets" => tweets}
   end
 end
