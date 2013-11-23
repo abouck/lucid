@@ -4,4 +4,7 @@ class StaticpagesController < ApplicationController
     Sentimental.load_defaults
     @analyzer = Sentimental.new
   end
+
+  def donotuse
+  end
  end
