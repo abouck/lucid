@@ -5,6 +5,7 @@ gem 'twitter'
 gem 'pry'
 gem 'figaro'
 gem 'sentimental', github: 'abouck/sentimental'
+gem 'd3-rails'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
