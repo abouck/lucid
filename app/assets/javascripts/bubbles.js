@@ -3,7 +3,7 @@ var Bubbles, root, texts;
 root = typeof exports !== "undefined" && exports !== null ? exports : this;
  
 Bubbles = function() {
-  var chart, clear, click, collide, collisionPadding, connectEvents, data, force, gravity, hashchange, height, idValue, jitter, label, margin, maxRadius, minCollisionRadius, mouseout, mouseover, node, rScale, rValue, textValue, tick, transformData, update, updateActive, updateLabels, updateNodes, width;
+  var chart, clear, click, collide, collisionPadding, connectEvents, data, force, gravity, hashchange, height, idValue, classValue, jitter, label, margin, maxRadius, minCollisionRadius, mouseout, mouseover, node, rScale, rValue, textValue, tick, transformData, update, updateActive, updateLabels, updateNodes, width;
   width = 980;
   height = 510;
   data = [];
@@ -19,6 +19,9 @@ Bubbles = function() {
   rScale = d3.scale.sqrt().range([0, maxRadius]);
   rValue = function(d) {
     return parseInt(d.count);
+  };
+  classValue = function(d) {
+    return d.class;
   };
   idValue = function(d) {
     return d.name;
@@ -84,7 +87,9 @@ Bubbles = function() {
       return idValue(d);
     });
     node.exit().remove();
-    return node.enter().append("a").attr("class", "bubble-node").attr("xlink:href", function(d) {
+    return node.enter().append("a").attr("class", function(d) {
+      return "bubble-node " + classValue(d)
+    }).attr("xlink:href", function(d) {
       return "#" + (encodeURIComponent(idValue(d)));
     }).call(force.drag).call(connectEvents).append("circle").attr("r", function(d) {
       return rScale(rValue(d));

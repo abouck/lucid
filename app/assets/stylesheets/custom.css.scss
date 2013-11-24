@@ -204,30 +204,37 @@ ul .nav navbar-nav navbar-right{
 
 .sent-great {
   background-color: rgba(0,204,0,1);
+  fill: rgba(0,204,0,1);
 }
 
 .sent-good {
   background-color: rgba(0,204,0,0.5);
+  fill: rgba(0,204,0,0.5);
 }
 
 .sent-ok {
   background-color: rgba(0,204,0,0.25);
+  fill: rgba(0,204,0,0.25);
 }
 
 .sent-neutral {
-  background-color: rgba(255,255,0,0.25)
+  background-color: rgba(255,255,0,0.25);
+  fill: rgba(255,255,0,0.25);
 }
 
 .sent-not-ok {
   background-color: rgba(255,0,0,0.25);
+  fill: rgba(255,0,0,0.25);
 }
 
 .sent-bad {
   background-color: rgba(255,0,0,0.5);
+  fill: rgba(255,0,0,0.5);
 }
 
 .sent-terrible {
   background-color: rgba(255,0,0,1);
+  fill: rgba(255,0,0,1);
 }
 
 // Bar Graph
@@ -306,10 +313,10 @@ header {
   pointer-events: all;
 }
 
-.bubble-node {
-  /* fill: #d1e0f3; */
-  fill: #DCE9BE;
-}
+// .bubble-node {
+//   /* fill: #d1e0f3; */
+//   fill: #DCE9BE;
+// }
 
 .bubble-hover {
   /* fill: #b8c7d9; */
