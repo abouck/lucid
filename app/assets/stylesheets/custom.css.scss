@@ -8,7 +8,6 @@ body {
 	line-height: 1.1;
 }
 
-
 a {
 	color: inherit;
 	text-decoration: none;
@@ -272,18 +271,9 @@ ul .nav navbar-nav navbar-right{
 
 // Bubbles
 
-#container {
-  padding-top:20px;
-}
-
-header {
-  padding: 10px;
-}
-
 #book-title {
   font-family: georgia, "times new roman", times, serif;
   color: #555;
-  font-size: 2.3em;
   text-align: center;
 }
 
@@ -313,14 +303,14 @@ header {
   pointer-events: all;
 }
 
-// .bubble-node {
-//   /* fill: #d1e0f3; */
-//   fill: #DCE9BE;
-// }
+.bubble-node {
+  stroke: #c5c5c5;
+  stroke-width: 1.5px;
+}
 
 .bubble-hover {
   /* fill: #b8c7d9; */
-  fill: #E8E9E7;
+  fill: white;
 }
 
 .bubble-selected {

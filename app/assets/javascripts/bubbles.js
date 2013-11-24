@@ -4,7 +4,7 @@ root = typeof exports !== "undefined" && exports !== null ? exports : this;
  
 Bubbles = function() {
   var chart, clear, click, collide, collisionPadding, connectEvents, data, force, gravity, hashchange, height, idValue, classValue, jitter, label, margin, maxRadius, minCollisionRadius, mouseout, mouseover, node, rScale, rValue, textValue, tick, transformData, update, updateActive, updateLabels, updateNodes, width;
-  width = 980;
+  width = 880;
   height = 510;
   data = [];
   node = null;

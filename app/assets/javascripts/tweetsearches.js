@@ -10,6 +10,7 @@
   });
       $( "#t_search" ).submit(function() {
       event.preventDefault();
+      $('.jumbotron').animate({'margin-top': "-450px"}, 1000)
       var searchString = {tweetsearch: tweetsearch.value};
       var searchParam = $.param (searchString);
       $.get('tweets/search.json?' + searchParam, function(profiletweets){
@@ -20,6 +21,7 @@
         });
         display(profiletweets.freqArr);
         d3.select("#book-title").html(tweetsearch.value);
+
       });
     });
 });
