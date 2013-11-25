@@ -7,26 +7,25 @@
           <button type="submit", class="btn btn-default">Search</button>
     </form>
 </div>
-<div id="container" class="container">
+<div id="container" class="container" style="display: none;">
     <header>
-    <h1>SentiBubbles!</h1>
     <h2>The most frequently used words for: <span id="book-title"></span></h2>
     </header>
     <div id="main" role="main">
       <div id="vis"></div>
       <div id="status"></div>
       <div id="controls">
-        <h3>Jitter</h3>
-        <form id="jitter" oninput="output.value = (jitter_input.value / 200).toFixed(3)" >
+        <h3>Adjust The Bounce!</h3>
+        <form id="jitter1" oninput="output.value = (jitter_input.value / 200).toFixed(3)" >
           <input id="jitter_input" type="range" min="0" max="400" value="100" style="width:240px;">
           <output name="output" for="input">0.5</output>
         </form>
       </div>
     </div>
+    <div class="scrolldown">Scroll Down To See The Tweets!</div>
   </div> <!--! end of #container -->
 
 <div class="container">
-<div class="text"><%= link_to 'Back', root_path %></div>
   <div class="graph"></div>
  <table class="text table table-hover tweet_table">
     <tr>

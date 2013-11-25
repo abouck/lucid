@@ -5,7 +5,7 @@
     return plotData("#vis", data, plot);
   };
   $("#text-select").val(key);
-  d3.select("#jitter").on("input", function() {
+  d3.select("#jitter1").on("input", function() {
     return plot.jitter(parseFloat(this.output.value));
   });
       $( "#t_search" ).submit(function() {
@@ -19,6 +19,7 @@
         profiletweets.tweets.forEach(function(tweet){
           $('.tweet_table').append("<tr class='"+ tweet.sentimental.class + "'><td><a href='http://www.twitter.com/" + tweet.user.screen_name + "'>" + tweet.text + "</a></td></tr>")
         });
+        $("#container").show();
         display(profiletweets.freqArr);
         d3.select("#book-title").html(tweetsearch.value);
 

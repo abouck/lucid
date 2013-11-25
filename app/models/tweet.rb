@@ -54,7 +54,6 @@ class Tweet < ActiveRecord::Base
         end
       end
     freqArr.sort_by! { |k| k["value"]}.reverse!
-    # freqArr.slice!(10..freqArr.length)
     tweetHash = {"freqArr" => freqArr, "tweets" => tweets}
   end
 end

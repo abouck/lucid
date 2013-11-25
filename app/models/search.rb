@@ -31,10 +31,29 @@ class Search < ActiveRecord::Base
     end
     wordArr.each { |word| tempHash[word] += 1 }
     tempHash.each do |key,value|
-      freqArr << {"label" => key, "value" => value}
+      freqArr << {"name" => key, "count" => value}
     end
+    freqArr.each do |arr| 
+      thash = analyzer.get_score arr["name"]
+       case thash["score"]
+        when 1.0...100.0
+          arr["class"] = "sent-great"
+        when 0.5..1
+          arr["class"] = "sent-good"
+        when 0.0001..0.5
+          arr["class"] = "sent-ok"
+        when 0.0
+          arr["class"] = "sent-neutral"
+        when -0.5..0.0
+          arr["class"] = "sent-not-ok"
+        when -1.0..-0.5
+          arr["class"] = "sent-bad"
+        when -100.0...-1.0
+          arr["class"] = "sent-terrible"
+        else
+        end
+      end
     freqArr.sort_by! { |k| k["value"]}.reverse!
-    freqArr.slice!(10..freqArr.length)
     tweetHash = {"freqArr" => freqArr, "tweets" => tweets}
   end
 end
