@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'omniauth-twitter'
-gem 'twitter'
+gem 'twitter', "~> 4.8.1"
 gem 'pry'
 gem 'figaro'
 gem 'sentimental', github: 'abouck/sentimental'
