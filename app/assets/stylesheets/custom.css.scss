@@ -3,7 +3,7 @@
 body { 
 	padding-top: 70px; 
 	background: url(image-path('wallpaper.jpg')); 
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: 'Oswald', Helvetica, Arial, sans-serif;
 	font-weight: 500;
 	line-height: 1.1;
 }
@@ -25,15 +25,18 @@ a {
   		text-align: center;
   		color: #D5D2CB;
         text-shadow: 4px 4px 2px #383038;
+        font-family: 'Oswald', Helvetica, Arial, sans-serif;
   	}
   	h3{
   		font-size: 24px;
   		color: #D5D2CB;
         text-shadow: 4px 2px 2px #383038;
+        font-family: 'Oswald', Helvetica, Arial, sans-serif;
   	}
   	p{
   		font-size: 14px;
   		color: #7BA29E;
+      font-family: 'Oswald', Helvetica, Arial, sans-serif;
   	}
 }
 
@@ -198,6 +201,7 @@ ul .nav navbar-nav navbar-right{
 		/*color: #7BA29E;*/
 		color: #648781;
 		text-shadow: 1px 2px 2px #ECF5F1;
+    font-family: 'Oswald', Helvetica, Arial, sans-serif;
 	}
 }
 
@@ -236,43 +240,10 @@ ul .nav navbar-nav navbar-right{
   fill: rgba(255,0,0,1);
 }
 
-// Bar Graph
-
-.bar rect
-        {
-/*
-            fill: black;
-            stroke: black;
-*/
-        }
-        .label
-        {
-            font-family: Verdana;
-            font-size: 15pt;
-            color: gray;
-            fill-opacity: .6;
-        }
-        .value
-        {
-            font-family: Verdana;
-            font-size: 11pt;
-            color: gray;
-            fill-opacity: .6;
-        }
-
-        .tick_label
-        {
-            font-size: 15pt;
-            font-family: Verdana;
-            color: gray;
-            fill-opacity: .6;
-        }
-
-
 // Bubbles
 
 #book-title {
-  font-family: georgia, "times new roman", times, serif;
+  font-family: 'Oswald', Helvetica, Arial, sans-serif;
   color: #555;
   text-align: center;
 }
@@ -285,7 +256,7 @@ ul .nav navbar-nav navbar-right{
 #vis {
   overflow: hidden;
   position: relative;
-  box-shadow: 0px 0px 3px black;
+  box-shadow: 0px 0px 8px 2px gray;
   border-radius: 3px;
 }
 
@@ -305,12 +276,14 @@ ul .nav navbar-nav navbar-right{
 }
 
 #controls {
-  padding: 20px;
-  background-color: #eee;
-  margin: 0 auto;
-  width: 350px;
-  border-radius: 3px;
-  box-shadow: 0px 0px 3px black;
+font-family: 'Oswald', Helvetica, Arial, sans-serif;
+padding-bottom: 5px;
+background-color: #eee;
+margin: 0 auto;
+width: 300px;
+border-radius: 10px;
+border: 1px solid #7BA29E  ;
+box-shadow: 0px 0px 8px 2px gray;
 }
 
 #bubble-background {
@@ -341,7 +314,7 @@ ul .nav navbar-nav navbar-right{
 }
 
 a.bubble-label {
-  font-family: georgia, "times new roman", times, serif;
+  font-family: 'Oswald', Helvetica, Arial, sans-serif;
   color: inherit;
   cursor: pointer;
   display: block;
@@ -353,7 +326,8 @@ a.bubble-label {
 
 
 .bubble-label .bubble-label-value {
-  font: 11px sans-serif;
+  font: 11px;
+  font-family: 'Oswald', Helvetica, Arial, sans-serif;
   white-space: nowrap;
 }
 
@@ -361,32 +335,6 @@ footer p {
   text-align: center;
   padding-top:20px;
   padding-bottom:20px;
-  font: 13px sans-serif;
+  font: 13px;
+  font-family: 'Oswald', Helvetica, Arial, sans-serif;
 }
-
-/* footer */
-
-/*footer {
-  padding-top: 5px;
-  border-top: 1px solid gray;
-  border-bottom: 1px solid gray;
-  background-color: #e7e7e7;
-  height: 35px;
-  color: #999;
-  a {
-    color: #555;
-    &:hover {
-      color: white;
-      text-decoration: none;
-    }
-  ul {
-    float: right;
-    list-style: none;
-	    li {
-	      float: left;
-	      margin-left: 10px;
-	      margin-right: 10px;
-	     }
-    }
-  }
-}*/
